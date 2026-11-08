@@ -1,0 +1,19 @@
+# Physics homework, problem 3 — a car trip
+d = 120 km
+t = 1.5 h
+v = d / t -> m/s
+
+# acceleration from rest
+a = v / t [m/s^2]
+
+# kinetic energy of a 1200 kg car
+m = 1200 kg
+KE = 0.5 * m * v^2 [J]
+
+# total "distance" (oops)
+total = d + t
+
+# momentum, but I forgot something
+p = m * a [kg*m/s]
+
+sin(30)

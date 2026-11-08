@@ -1,0 +1,40 @@
+{
+  "name": "newton-is-crying",
+  "version": "1.0.0",
+  "description": "A dimensional-analysis checker for physics homework. When your units don't match, famous scientists react.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Rahimjon Xasanov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GGmanforeal/newton-is-crying.git"
+  },
+  "keywords": [
+    "physics",
+    "units",
+    "dimensional-analysis",
+    "education",
+    "parser"
+  ],
+  "bin": {
+    "newton": "dist-cli/newton.mjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:web && npm run build:cli",
+    "build:web": "vite build",
+    "build:cli": "esbuild src/cli.ts --bundle --platform=node --format=esm --target=node18 --outfile=dist-cli/newton.mjs",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check-example": "node dist-cli/newton.mjs examples/broken-homework.txt"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6",
+    "vite-plugin-singlefile": "^2.3.4",
+    "vitest": "^5.1.0"
+  }
+}

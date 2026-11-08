@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A dimensional-analysis checker for physics homework. When your units don't match, famous scientists react." />
+    <title>Newton Is Crying — a units checker for homework</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🍎<span class="drop">💧</span></div>
+        <div>
+          <h1>Newton Is Crying</h1>
+          <p class="tagline">A units checker that cares a little too much about your homework.</p>
+        </div>
+      </div>
+      <div class="actions">
+        <label class="sr-only" for="examples">Load an example</label>
+        <select id="examples"></select>
+        <button id="share" type="button" title="Copy a link to this sheet">🔗 Share</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card sheet" aria-label="Homework sheet">
+        <div class="sheet-head">
+          <span>Your working</span>
+          <span id="summary" class="summary"></span>
+        </div>
+        <div class="editor">
+          <div class="gutter" id="gutter" aria-hidden="true"></div>
+          <textarea id="input" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off" aria-label="Homework lines"></textarea>
+          <div class="results" id="results" role="list" aria-label="Results per line"></div>
+        </div>
+      </section>
+
+      <aside class="side">
+        <section class="card drama" aria-live="polite">
+          <div class="avatar" id="avatar"></div>
+          <div class="bubble">
+            <p class="quote" id="quote"></p>
+            <p class="who" id="who"></p>
+          </div>
+          <div class="explain" id="explain"></div>
+          <div class="nav" id="nav"></div>
+        </section>
+
+        <section class="card meter">
+          <div class="meter-title">Newton's tear-o-meter</div>
+          <div class="drops" id="drops"></div>
+        </section>
+
+        <section class="card cheats">
+          <div class="meter-title">Cheat sheet</div>
+          <table>
+            <tr><td><code>d = 120 km</code></td><td>number + unit</td></tr>
+            <tr><td><code>v = d / t -&gt; m/s</code></td><td>convert</td></tr>
+            <tr><td><code>F = m*a [N]</code></td><td>expect a unit</td></tr>
+            <tr><td><code>v : m/s</code></td><td>symbol, no value</td></tr>
+            <tr><td><code>v^2 = u^2 + 2*a*s</code></td><td>check a formula</td></tr>
+            <tr><td><code>g c G h e k_B N_A pi</code></td><td>constants</td></tr>
+            <tr><td><code>sqrt sin cos ln exp</code></td><td>functions</td></tr>
+          </table>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      Everything runs in your browser — nothing is uploaded.
+      Built by <a href="https://github.com/GGmanforeal">Rahimjon Xasanov</a> ·
+      <a href="https://github.com/GGmanforeal/newton-is-crying">source on GitHub</a>
+    </footer>
+    <script type="module" src="/src/web/main.ts"></script>
+  </body>
+</html>
