@@ -101,7 +101,7 @@ something is wrong, it says exactly what is wrong:
 - **Deterministic jokes.** The scientist is chosen by an FNV-1a hash of the line, so the same
   mistake always gets the same reaction. That keeps the tests and screenshots stable.
 
-All of this is about 1,000 lines of TypeScript with **zero runtime dependencies**.
+The engine is about 1,200 lines of TypeScript with **zero runtime dependencies**.
 I wrote the parser, the units system and the formatter myself instead of using a units library.
 
 ## Run it on Windows
